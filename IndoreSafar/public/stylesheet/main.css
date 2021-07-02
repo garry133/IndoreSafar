@@ -6,6 +6,10 @@
   height: 30%;
 } */
 
+#delete-form {
+  display: inline;
+}
+
 #logo {
   width: 2%;
   height: 5%;
