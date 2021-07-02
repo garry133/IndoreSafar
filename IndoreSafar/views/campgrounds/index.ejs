@@ -1,0 +1,33 @@
+<%- include("../partials/header") %>
+<!-- <h4><%= currentUser %></h4> -->
+    <div class="container">
+        <header class="jumbotron" style="background-color: gray;">
+            <div class="container">
+                <h1>Welcome to CityTour!!</h1>
+                <h2>Religious Places</h2>
+                <p>View our hand-picked campgrounds from all over the world</p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground</a>
+                </p>
+            </div>
+        </header>
+
+        <h3>Our Most Popular Campgrounds!!</h3>
+        <div class="row text-center">
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img class="card-img-top" src="<%= campground.image %>" alt="<%= campground.name %>" width="250"
+                            height="250">
+                        <div class="card-body">
+                            <h4 class="card-title" id="cm"><%= campground.name %>:</h4>
+                            <p class="card-text" id="cm">Its a way to relax from usual days</p>
+                            <a href="/campgrounds/<%= campground._id%>" class="btn btn-primary">visit</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+    </div>
+    <%- include("../partials/footer") %>
