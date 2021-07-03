@@ -1,9 +1,21 @@
 <%- include("partials/header") %>
-    <h1>Sign Up!</h1>
-
-    <form action="/register" method="post">
-        <input style="color: black;" type="text" name="username" placeholder="username">
-        <input style="color: black;"type="password" name="password" placeholder="password">
-        <button style="color: black;">Sign Up</button>
-    </form>
+    <br>
+    <div style="background-color: black;" class="jumbotron">
+    <div class="container">
+        <form class="border-class" action="/register" method="POST">
+            <h1>Sign Up!</h1>
+            <div class="form-group">
+                <label for="inlineFormInputGroup">Username</label>
+                <input type="text" name="username" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up!</button>
+        </form>
+    </div>
+    </div>
+    <br>
+    <br>
 <%- include("partials/footer") %>
