@@ -1,26 +1,29 @@
 <%- include("../partials/header") %>
-    <div class="container">
-        <div>
-            <h1 style="color: aliceblue;">Edit <%= campground.name %> </h1>
-            <div style="width: 30%; margin: 0;">
-                <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="campground[description]" value="<%= campground.description %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary btn-default">Submit!</button>
-                    </div>
-                </form>
-            </div>
+    <br>
+    <div style="background-color: black; color: aliceblue;" class="jumbotron">
+        <div class="container">
+            <form style="border: thin whitesmoke solid; margin: 20px;padding: 20px;" action="/campgrounds"
+                method="POST">
+                <h1>Edit <%= campground.name %>!!</h1>
+                <div class="form-group">
+                    <label for="inlineFormInputGroup">Name</label>
+                    <input type="text"  class="form-control" id="inlineFormInputGroup" name="campground[name]" value="<%= campground.name %>">
+                </div>
+                <div class="form-group">
+                    <label for="inlineFormInputGroup">Image url</label>
+                    <input class="form-control" type="text" id="inlineFormInputGroup"
+                        name="campground[image]" value="<%= campground.image %>">
+                </div>
+                <div class="form-group">
+                    <label for="inlineFormInputGroup">Description</label>
+                    <input class="form-control" type="text" id="inlineFormInputGroup"
+                        name="campground[description]" value="<%= campground.description %>">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit!</button>
+            </form>
             <a href="/campgrounds">Go back</a>
         </div>
-
     </div>
 
+    <br>
     <%- include("../partials/footer") %>
