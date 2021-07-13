@@ -3,8 +3,9 @@
     <div style="background-color: black; color: aliceblue;" class="jumbotron">
         <div class="container">
             <form style="border: thin whitesmoke solid; margin: 20px;padding: 20px;"
-                action="/campgrounds/<%=campground._id%>/comments" method="POST">
-                <h1>Add New Comment to <%=campground.name%>
+                action="/places/<%=place._id%>/comments" method="POST">
+
+                <h1>Add New Comment to <%=place.name%>
                 </h1>
                 <div class="form-group">
                     <label for="inlineFormInputGroup">Comment</label>
@@ -13,11 +14,11 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit!</button>
             </form>
-            <a href="/campgrounds">Go back</a>
+            <a href="/places">Go back</a>
         </div>
     </div>
     <br>
     <br>
     <br>
     <br>
-<%- include("../partials/footer") %>
+    <%- include("../partials/footer") %>

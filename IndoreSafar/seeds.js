@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
-var Campground = require("./models/campground");
+// var Campground = require("./models/campground");
+var Place = require("./models/place");
 var Comment   = require("./models/comment");
 
 var data = [
@@ -22,11 +23,12 @@ var data = [
 
 function seedDB(){
    //Remove all campgrounds
-   Campground.deleteMany({}, function(err){
+//    Campground.deleteMany({}, function(err){
+  Place.deleteMany({}, function(err){
         if(err){
             console.log(err);
         }
-        console.log("removed campgrounds!");
+        console.log("removed places!");
         Comment.deleteOne({}, function(err) {
             if(err){
                 console.log(err);
@@ -34,11 +36,12 @@ function seedDB(){
             console.log("removed comments!");
              //add a few campgrounds
             data.forEach(function(seed){
-                Campground.create(seed, function(err, campground){
+                // Campground.create(seed, function(err, campground){
+                Place.create(seed, function(err, place){
                     if(err){
                         console.log(err)
                     } else {
-                        console.log("added a campground");
+                        console.log("added a place");
                         //create a comment
                         Comment.create(
                             {
@@ -48,8 +51,10 @@ function seedDB(){
                                 if(err){
                                     console.log(err);
                                 } else {
-                                    campground.comments.push(comment);
-                                    campground.save();
+                                    // campground.comments.push(comment);
+                                    // campground.save();
+                                   place.comments.push(comment);
+                                    place.save();
                                     console.log("Created new comment");
                                 }
                             });
