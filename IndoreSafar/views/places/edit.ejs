@@ -2,34 +2,25 @@
     <br>
     <div style="background-color: black; color: aliceblue;" class="jumbotron">
         <div class="container">
-            <!-- <form style="border: thin whitesmoke solid; margin: 20px;padding: 20px;" action="/campgrounds"
-                method="POST"> -->
             <form style="border: thin whitesmoke solid; margin: 20px;padding: 20px;" action="/places" method="POST">
-                <!-- <h1>Edit <%= campground.name %>!!</h1> -->
                 <h1>Edit <%= place.name %>!!</h1>
                 <div class="form-group">
                     <label for="inlineFormInputGroup">Name</label>
-                    <!-- <input type="text"  class="form-control" id="inlineFormInputGroup" name="campground[name]" value="<%= campground.name %>"> -->
                     <input type="text" class="form-control" id="inlineFormInputGroup" name="place[name]"
                         value="<%= place.name %>">
                 </div>
                 <div class="form-group">
                     <label for="inlineFormInputGroup">Image url</label>
-                    <!-- <input class="form-control" type="text" id="inlineFormInputGroup"
-                        name="campground[image]" value="<%= campground.image %>"> -->
                     <input class="form-control" type="text" id="inlineFormInputGroup" name="place[image]"
                         value="<%= place.image %>">
                 </div>
                 <div class="form-group">
                     <label for="inlineFormInputGroup">Description</label>
-                    <!-- <input class="form-control" type="text" id="inlineFormInputGroup"
-                        name="campground[description]" value="<%= campground.description %>"> -->
                     <input class="form-control" type="text" id="inlineFormInputGroup" name="place[description]"
                         value="<%= place.description %>">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit!</button>
             </form>
-            <!-- <a href="/campgrounds">Go back</a> -->
             <a href="/places">Go back</a>
         </div>
     </div>

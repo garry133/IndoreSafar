@@ -6,7 +6,6 @@ var express = require("express"),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
-    // Campground = require("./models/campground"),
     Place = require("./models/place"),
     Comment = require("./models/comment"),
     User = require("./models/user"),
@@ -14,7 +13,6 @@ var express = require("express"),
 
 //requiring routes
 var commentRoutes = require("./routes/comments"),
-    // campgroundRoutes = require("./routes/campgrounds"),
     placeRoutes = require("./routes/places"),
     indexRoutes = require("./routes/index");
 
@@ -50,7 +48,6 @@ app.use(function (req, res, next) {
 });
 
 app.use(indexRoutes);
-// app.use(campgroundRoutes);
 app.use(placeRoutes);
 app.use(commentRoutes);
 
