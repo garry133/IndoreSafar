@@ -19,7 +19,7 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
 # Features
 1. Users can create, edit, and remove places. <br>
 2. user can describe places. <br>
-3. Users can review places once, and edit or remove their review.
+3. Users can review places and edit or remove their review.
 
 
 
