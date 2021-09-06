@@ -24,7 +24,8 @@
                             <%= place.description %>
                         </p>
                         <p class="card-text" id="cm">
-                            <em>Submitted By <%= place.author.username %></em>
+                            <em>Added By <%= place.author.username %></em><br>
+                            <a href="/places">Go back</a>
                         </p>
                         <% if(currentUser && place.author.id.equals(currentUser._id)){ %>
                             <a class="btn btn-xs btn-warning" href="/places/<%= place._id %>/edit">Edit</a>
